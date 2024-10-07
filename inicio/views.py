@@ -10,7 +10,7 @@ def mi_vista (request):
 
 def inicio(request):
     # return HttpResponse('<h1>Soy la pantalla de inicio</h1>')
-    return(request, 'index.html')
+    return render(request, 'index.html')
 
 def vista_datos1(request, nombre):
     nombre_mayus = nombre.upper()
@@ -51,7 +51,7 @@ def segundo_template(request):
 
     #v3
     return render(request, 'segundo_template.html', datos)
-
+    
 def crear_auto(request, marca, modelo, anio):
     
     auto = Auto(marca, modelo, anio)
